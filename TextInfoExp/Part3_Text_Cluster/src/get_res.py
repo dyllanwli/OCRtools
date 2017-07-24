@@ -15,7 +15,7 @@ sys.setdefaultencoding("utf-8")
 
 # 将文本汇总成一个txt
 def get_text():
-    base_path = "C:/Users/kaifun/Desktop/ass_TIP/TextInfoExp/Part3_Text_Cluster/data/"
+    base_path = "/Users/Dylan/Documents/GitHub/NLP/TextInfoExp/Part3_Text_Cluster/"
     filelist = os.listdir(base_path)
     data_dict = {}
     f2 = open('../data.txt', 'w')
@@ -35,7 +35,7 @@ def get_text():
 
 
 def trans_text(item):
-    base_path = "C:/Users/kaifun/Desktop/ass_TIP/TextInfoExp/Part3_Text_Cluster/data_temp2/%s/" % item
+    base_path = "/Users/Dylan/Documents/GitHub/NLP/TextInfoExp/Part3_Text_Cluster/data_temp2/%s/" % item
     filelist = os.listdir(base_path)
     # salt = ''.join(random.sample(string.ascii_letters + string.digits, 8))
     f3 = open('id2class2.txt', 'a')
@@ -44,7 +44,7 @@ def trans_text(item):
         f = open(base_path + files, 'r')
         text = (f.read().decode('GB2312', 'ignore').encode('utf-8'))
         salt = ''.join(random.sample(string.ascii_letters + string.digits, 8))  # 产生随机数
-        f2 = open("C:/Users/kaifun/Desktop/ass_TIP/TextInfoExp/Part3_Text_Cluster/data_test/" + salt + '.txt', 'w')
+        f2 = open("/Users/Dylan/Documents/GitHub/NLP/TextInfoExp/Part3_Text_Cluster/data_test/" + salt + '.txt', 'w')
         f2.write(text)
         f3.write(salt + ' ' + item + '\n')  # 添加类别
         f.close()
@@ -71,7 +71,7 @@ def trans_res():
     ff2 = open('data_abs2.txt', 'w')
     for (k, v) in res:
         if str(v) == '1':
-            fff1 = open("C:/Users/kaifun/Desktop/ass_TIP/TextInfoExp/Part3_Text_Cluster/data/%s.txt" % k, 'r')
+            fff1 = open("/Users/Dylan/Documents/GitHub/NLP/TextInfoExp/Part3_Text_Cluster/data/%s.txt" % k, 'r')
             text = fff1.read()
             data_temp = text.decode('utf-8')  # 转换为unicode编码形式
             data = ''.join(re.findall(u'[\u4e00-\u9fff]+', data_temp))  # 必须为unicode类型，取出所有中文字符
@@ -79,7 +79,7 @@ def trans_res():
             ff1.write(data.encode('utf-8'))
             # text_list1.append(k)
         if str(v) == '2':
-            fff2 = open("C:/Users/kaifun/Desktop/ass_TIP/TextInfoExp/Part3_Text_Cluster/data/%s.txt" % k, 'r')
+            fff2 = open("/Users/Dylan/Documents/GitHub/NLP/TextInfoExp/Part3_Text_Cluster/data/%s.txt" % k, 'r')
             text = fff2.read()
             data_temp = text.decode('utf-8')  # 转换为unicode编码形式
             data = ''.join(re.findall(u'[\u4e00-\u9fff]+', data_temp))  # 必须为unicode类型，取出所有中文字符
