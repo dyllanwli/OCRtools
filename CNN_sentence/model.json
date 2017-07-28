@@ -1,0 +1,16 @@
+{
+  "img_w":300,
+  "max_l":56,
+  "filter_hs":[3, 4, 5],
+  "hidden_units":[100, 2],
+  "dropout_rate":[0.5],
+  "shuffle_batch":true,
+  "n_epochs":25,
+  "batch_size":50,
+  "lr_decay":0.95,
+  "conv_non_linear":"relu",
+  "activations":["Iden"],
+  "sqr_norm_lim":9,
+  "non_static":false,
+  "word_vectors":"word2vec"
+}
