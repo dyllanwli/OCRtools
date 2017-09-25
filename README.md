@@ -1,2 +1,2 @@
 # NLP
-an NLP repo use to do classificaiton
+an repo for OCR, text classification and other stuff...
