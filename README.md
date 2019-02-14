@@ -1,2 +1,2 @@
 # NLP
-an repo for OCR, text classification and other stuff...
+using different NLP model to handle OCR
